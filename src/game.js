@@ -1,8 +1,5 @@
 //game.js
-// var prompt = require('prompt');
 
-//start the prompt
-// prompt.start();
 
 var Player = function(name){
    this.name = name
