@@ -7,52 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Snowburst+One">
+    <link href="https://fonts.googleapis.com/css?family=Dekko" rel="stylesheet">
   </head>
+
   <body>
     <header>
-        <h1> Tic Tac Toe </h1>
+        <h1> Tic-Tac-Snow </h1>
     </header>
 
-    <main>
+    <main id ="snow">
+
       <div class="player-names-form">
-        <section class="row contact-form">
-          <h3>Player Information</h3>
+        <section class="row">
           <div class="columns">
             <label>
-              Who will be player 'X'?
-              <input type="text" name="name">
+              1st player's name:
+              <input type="text" name="name1">
             </label>
             <label>
-              Who will be player 'Y'?
-              <input type="text" name="email">
+              2nd player's name:
+              <input type="text" name="name2">
             </label>
-            <h3 class="button btn-save">Save</h3>
-            <h3 class="button btn-cancel">Cancel</h3>
+            <h3 class="button btn-save">Play!</h3>
           </div>
         </section>
       </div>
 
-
-      <div class = "board-outline">
-        <ul class ="board-row">
-          <li id = "spot1"></li>
-          <li id = "spot2"></li>
-          <li id = "spot3"></li>
-        </ul>
-
-        <ul class ="board-row">
-          <li id = "spot4"></li>
-          <li id = "spot5"></li>
-          <li id = "spot6"></li>
-        </ul>
-
-        <ul class ="board-row">
-          <li id = "spot7"></li>
-          <li id = "spot8"></li>
-          <li id = "spot9"></li>
-        </ul>
-
+        <table class = "board-outline">
+          <tr class ="board-row">
+            <td id = "spot1"></td>
+            <td id = "spot2"></td>
+            <td id = "spot3"></td>
+          </tr>
+          <tr>
+            <td id = "spot4"></td>
+            <td id = "spot5"></td>
+            <td id = "spot6"></td>
+          </tr>
+          <tr>
+            <td id = "spot7"></td>
+            <td id = "spot8"></td>
+            <td id = "spot9"></td>
+          </tr>
+        </table>
       </div>
 
     </main>
