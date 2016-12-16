@@ -7,7 +7,7 @@ import Board from 'app/collections/board';
 const Player = Backbone.Model.extend({
 
   initialize: function(options) {
-   }
+  },
 
    defaults: {
      id: 1
