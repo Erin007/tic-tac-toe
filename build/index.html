@@ -10,7 +10,54 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
   </head>
   <body>
-    <h1> Tic Tac Toe </h1>
+    <header>
+        <h1> Tic Tac Toe </h1>
+    </header>
+
+    <main>
+      <div class="player-names-form">
+        <section class="row contact-form">
+          <h3>Player Information</h3>
+          <div class="columns">
+            <label>
+              Who will be player 'X'?
+              <input type="text" name="name">
+            </label>
+            <label>
+              Who will be player 'Y'?
+              <input type="text" name="email">
+            </label>
+            <h3 class="button btn-save">Save</h3>
+            <h3 class="button btn-cancel">Cancel</h3>
+          </div>
+        </section>
+      </div>
+
+
+      <div class = "board-outline">
+        <ul class ="board-row">
+          <li id = "spot1"></li>
+          <li id = "spot2"></li>
+          <li id = "spot3"></li>
+        </ul>
+
+        <ul class ="board-row">
+          <li id = "spot4"></li>
+          <li id = "spot5"></li>
+          <li id = "spot6"></li>
+        </ul>
+
+        <ul class ="board-row">
+          <li id = "spot7"></li>
+          <li id = "spot8"></li>
+          <li id = "spot9"></li>
+        </ul>
+
+      </div>
+
+    </main>
+
+
     <script src="/app.bundle.js" charset="utf-8"></script>
   </body>
 </html>

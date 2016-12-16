@@ -1,0 +1,35 @@
+h1 {
+  font-family: 'Permanent Marker', sans-serif;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul li{
+  display: inline;
+ }
+
+#spot1 {
+  border-right: solid 5px black;
+  border-bottom: solid 5px black;
+  width: 25%;
+  background-color: red;
+  padding: 5%;
+}
+
+#spot2 {
+  border-right: solid 5px black;
+  border-bottom: solid 5px black;
+  width: 25%;
+  background-color: yellow;
+  padding: 5%;
+}
+
+#spot3 {
+  /*border-right: solid 5px black;*/
+  border-bottom: solid 5px black;
+  width: 25%;
+  background-color: green;
+  padding: 5%;
+}
