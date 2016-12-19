@@ -12,98 +12,98 @@ describe('Game', function() {
     });
   });
 
-  // describe('playerX', function() {
-  //   it('Game should initialize with playerX', function() {
-  //       expect(testGame.playerX).toBeDefined();
-  //       //expect(testGame.playerX.name).toEqual("Erin")
-  //   });
-  // });
-  //
-  // describe('playerY', function() {
-  //   it('Game should initialize with playerO', function() {
-  //       expect(testGame.playerO).toBeDefined()
-  //       //expect(testGame.playerO.name).toEqual("Rachel")
-  //   });
-  // });
-  //
-  // describe('winner and announceWinner', function() {
-  //   it('There should not be winner on an empty board', function() {
-  //       expect(testGame.winner()).toBeDefined();
-  //       expect(testGame.winner()).toEqual(false);
-  //       expect(testGame.announceWinner()).toEqual(false);
-  //   });
-  //
-  //   it('should return the winner for horizontal wins', function() {
-  //     testGame.board = [
-  //             ["X","X","X"],
-  //             [" "," "," "],
-  //             [" "," "," "],
-  //           ];
-  //       expect(testGame.winner()).toEqual("X");
-  //       expect(testGame.announceWinner()).toEqual(true);
-  //
-  //       testGame.board = [
-  //             [" "," "," "],
-  //             ["X","X","X"],
-  //             [" "," "," "],
-  //           ];
-  //       expect(testGame.winner()).toEqual("X");
-  //       expect(testGame.announceWinner()).toEqual(true);
-  //
-  //       testGame.board = [
-  //             [" "," "," "],
-  //             [" "," "," "],
-  //             ["X","X","X"],
-  //           ];
-  //       expect(testGame.winner()).toEqual("X");
-  //       expect(testGame.announceWinner()).toEqual(true);
-  //   });
-  //
-  //     it('should return the winner for vertical wins', function() {
-  //       testGame.board = [
-  //               ["O"," "," "],
-  //               ["O"," "," "],
-  //               ["O"," "," "],
-  //             ];
-  //       expect(testGame.winner()).toEqual("O");
-  //       expect(testGame.announceWinner()).toEqual(true);
-  //
-  //       testGame.board = [
-  //               [" ","O"," "],
-  //               [" ","O"," "],
-  //               [" ","O"," "],
-  //             ];
-  //       expect(testGame.winner()).toEqual("O");
-  //       expect(testGame.announceWinner()).toEqual(true);
-  //
-  //       testGame.board = [
-  //               [" "," ","O"],
-  //               [" "," ","O"],
-  //               [" "," ","O"],
-  //             ];
-  //       expect(testGame.winner()).toEqual("O");
-  //       expect(testGame.announceWinner()).toEqual(true);
-  //   });
-  //
-  //   it('should return the winner for diagonal wins', function() {
-  //     testGame.board = [
-  //             ["O"," "," "],
-  //             [" ","O"," "],
-  //             [" "," ","O"],
-  //           ];
-  //     expect(testGame.winner()).toEqual("O");
-  //     expect(testGame.announceWinner()).toEqual(true);
-  //
-  //     testGame.board = [
-  //             [" "," ","X"],
-  //             [" ","X"," "],
-  //             ["X"," "," "],
-  //           ];
-  //     expect(testGame.winner()).toEqual("X");
-  //     expect(testGame.announceWinner()).toEqual(true);
-  //   });
-  // });
-  //
+  describe('playerX', function() {
+    it('Game should initialize with playerX', function() {
+        expect(testGame.get("playerX")).toBeDefined();
+        expect(testGame.get("playerX")).toEqual("Xavier"); //<-- hardcode for now until input comes in from the form
+    });
+  });
+
+  describe('playerO', function() {
+    it('Game should initialize with playerO', function() {
+        expect(testGame.get("playerO")).toBeDefined();
+        expect(testGame.get("playerO")).toEqual("Octavia");//<-- hardcode for now until input comes in from the form
+    });
+  });
+
+  describe('winner and announceWinner', function() {
+    it('There should not be winner on an empty board', function() {
+        expect(testGame.winner()).toBeDefined();
+        expect(testGame.winner()).toEqual(false);
+        //expect(testGame.announceWinner()).toEqual(false);
+    });
+
+    it('should return the winner for horizontal wins', function() {
+      testGame.set("board", [
+              ["X","X","X"],
+              [" "," "," "],
+              [" "," "," "],
+            ]);
+        expect(testGame.winner()).toEqual("X");
+        //expect(testGame.announceWinner()).toEqual(true);
+
+        testGame.set("board", [
+              [" "," "," "],
+              ["X","X","X"],
+              [" "," "," "],
+            ]);
+        expect(testGame.winner()).toEqual("X");
+        //expect(testGame.announceWinner()).toEqual(true);
+
+        testGame.set("board", [
+              [" "," "," "],
+              [" "," "," "],
+              ["X","X","X"],
+            ]);
+        expect(testGame.winner()).toEqual("X");
+        //expect(testGame.announceWinner()).toEqual(true);
+    });
+
+      it('should return the winner for vertical wins', function() {
+        testGame.set("board", [
+                ["O"," "," "],
+                ["O"," "," "],
+                ["O"," "," "],
+              ]);
+        expect(testGame.winner()).toEqual("O");
+        //expect(testGame.announceWinner()).toEqual(true);
+
+        testGame.set("board", [
+                [" ","O"," "],
+                [" ","O"," "],
+                [" ","O"," "],
+              ]);
+        expect(testGame.winner()).toEqual("O");
+        //expect(testGame.announceWinner()).toEqual(true);
+
+        testGame.set("board", [
+                [" "," ","O"],
+                [" "," ","O"],
+                [" "," ","O"],
+              ]);
+        expect(testGame.winner()).toEqual("O");
+        //expect(testGame.announceWinner()).toEqual(true);
+    });
+
+    it('should return the winner for diagonal wins', function() {
+      testGame.set("board", [
+              ["O"," "," "],
+              [" ","O"," "],
+              [" "," ","O"],
+            ]);
+      expect(testGame.winner()).toEqual("O");
+      //expect(testGame.announceWinner()).toEqual(true);
+
+      testGame.set("board", [
+              [" "," ","X"],
+              [" ","X"," "],
+              ["X"," "," "],
+            ]);
+      expect(testGame.winner()).toEqual("X");
+      //expect(testGame.announceWinner()).toEqual(true);
+    });
+  });
+
   // describe('count, countX, countO', function() {
   //   it("should return true when there are more X's than O's", function() {
   //     testGame.board = [  //all Xs, no Os
