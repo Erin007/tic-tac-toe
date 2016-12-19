@@ -11,6 +11,9 @@ const BoardView = Backbone.View.extend({
   events: {
   },
 
+  resetBoard: function(){
+    //clears all the spots, making them all null
+  },
 
 
   render: function() {

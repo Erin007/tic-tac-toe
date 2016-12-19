@@ -1,3 +1,4 @@
+//board.js
 import Backbone from 'backbone';
 //import Contact from 'app/models/contact';
 
@@ -8,5 +9,7 @@ const Board = Backbone.Collection.extend({
   // spot.
   model: Spot
 });
+
+//listens for changes to any of the spots then updates the collection
 
 export default Board;

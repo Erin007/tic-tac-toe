@@ -12,6 +12,10 @@ const SpotView = Backbone.View.extend({
     'click': //on a spot lets you change the value of the spot
   },
 
+  drawSymbol: function(){
+    //takes the spot and what symbol should be put there and fills in the spot, re-renders the board because the collection has been updated 
+  }
+
 
   render: function() {
     // const rolodexView = new RolodexView({
