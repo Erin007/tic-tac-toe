@@ -104,54 +104,54 @@ describe('Game', function() {
     });
   });
 
-  // describe('count, countX, countO', function() {
-  //   it("should return true when there are more X's than O's", function() {
-  //     testGame.board = [  //all Xs, no Os
-  //             [" "," ","X"],
-  //             [" ","X"," "],
-  //             ["X"," "," "],
-  //           ];
-  //     expect(testGame.count()).toEqual(true);
-  //     expect(testGame.countX()).toEqual(3);
-  //     expect(testGame.countO()).toEqual(0);
-  //
-  //     testGame.board = [  // same # Xs and Os
-  //             ["O","O","X"],
-  //             [" ","X","O"],
-  //             ["X"," "," "],
-  //           ];
-  //     expect(testGame.count()).toEqual(false);
-  //     expect(testGame.countX()).toEqual(3);
-  //     expect(testGame.countO()).toEqual(3);
-  //
-  //     testGame.board = [ //more Os than Xs note: this should never occur given our game set up because X always goes first
-  //             ["O","O","X"],
-  //             [" ","X","O"],
-  //             ["X"," ","O"],
-  //           ];
-  //     expect(testGame.count()).toEqual(false);
-  //     expect(testGame.countX()).toEqual(3);
-  //     expect(testGame.countO()).toEqual(4);
-  //
-  //     testGame.board = [ //more Xs than Os
-  //             ["O","O","X"],
-  //             [" ","X","O"],
-  //             ["X"," ","X"],
-  //           ];
-  //     expect(testGame.count()).toEqual(true);
-  //     expect(testGame.countX()).toEqual(4);
-  //     expect(testGame.countO()).toEqual(3);
-  //
-  //     testGame.board = [ //empty board
-  //             [" "," "," "],
-  //             [" "," "," "],
-  //             [" "," "," "],
-  //           ];
-  //     expect(testGame.count()).toEqual(false);
-  //     expect(testGame.countX()).toEqual(0);
-  //     expect(testGame.countO()).toEqual(0);
-  //   });
-  // });
+  describe('moreXs, countX, countO', function() {
+    it("should return true when there are more X's than O's", function() {
+      testGame.set("board", [  //all Xs, no Os
+              [" "," ","X"],
+              [" ","X"," "],
+              ["X"," "," "],
+            ]);
+      expect(testGame.moreXs()).toEqual(true);
+      expect(testGame.countX()).toEqual(3);
+      expect(testGame.countO()).toEqual(0);
+
+      testGame.set("board", [  // same # Xs and Os
+              ["O","O","X"],
+              [" ","X","O"],
+              ["X"," "," "],
+            ]);
+      expect(testGame.moreXs()).toEqual(false);
+      expect(testGame.countX()).toEqual(3);
+      expect(testGame.countO()).toEqual(3);
+
+      testGame.set("board", [ //more Os than Xs note: this should never occur given our game set up because X always goes first
+              ["O","O","X"],
+              [" ","X","O"],
+              ["X"," ","O"],
+            ]);
+      expect(testGame.moreXs()).toEqual(false);
+      expect(testGame.countX()).toEqual(3);
+      expect(testGame.countO()).toEqual(4);
+
+      testGame.set("board", [ //more Xs than Os
+              ["O","O","X"],
+              [" ","X","O"],
+              ["X"," ","X"],
+            ]);
+      expect(testGame.moreXs()).toEqual(true);
+      expect(testGame.countX()).toEqual(4);
+      expect(testGame.countO()).toEqual(3);
+
+      testGame.set("board", [ //empty board
+              [" "," "," "],
+              [" "," "," "],
+              [" "," "," "],
+            ]);
+      expect(testGame.moreXs()).toEqual(false);
+      expect(testGame.countX()).toEqual(0);
+      expect(testGame.countO()).toEqual(0);
+    });
+  });
   //
   // describe('drawSymbol', function() {
   //   it('should let a player put their symbol in each of the 9 spots, if the spots are empty (spot can be number or word)', function() {
@@ -200,25 +200,25 @@ describe('Game', function() {
   //   });
   // });
   //
-  // describe('tie', function() {
-  //   it('should declare a tie game if there is not a winner', function() {
-  //     testGame.board = [
-  //                     [" "," "," "],
-  //                     [" "," "," "],
-  //                     [" "," "," "],
-  //                   ];
-  //     expect(testGame.tie()).toEqual(false)
-  //     expect(testGame.announceWinner()).toEqual(false);
-  //
-  //     testGame.board = [
-  //             ["X","O","X"],
-  //             ["X","X","O"],
-  //             ["O","X","O"],
-  //           ];
-  //     expect(testGame.tie()).toEqual(true)
-  //     expect(testGame.announceWinner()).toEqual(true);
-  //   });
-  // });
+  describe('tie', function() {
+    it('should declare a tie game if there is not a winner', function() {
+      testGame.set("board", [
+                      [" "," "," "],
+                      [" "," "," "],
+                      [" "," "," "],
+                    ]);
+      expect(testGame.tie()).toEqual(false)
+      //expect(testGame.announceWinner()).toEqual(false);
+
+      testGame.set("board", [
+              ["X","O","X"],
+              ["X","X","O"],
+              ["O","X","O"],
+            ]);
+      expect(testGame.tie()).toEqual(true)
+      //expect(testGame.announceWinner()).toEqual(true);
+    });
+  });
 
 
 });

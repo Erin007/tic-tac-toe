@@ -17,12 +17,13 @@ saveNames: function(e){
     console.log("Setting the player names")
     this.model.set("playerX", this.$('#X').val())
     this.model.set("playerO", this.$('#O').val())
-    this.greetPlayers()
+    this.greetPlayer()
     this.clearForm();
   },
 
-greetPlayers : function(){
-
+greetPlayer : function(){
+  this.$(".player-names-form").hide();
+  this.$(".greet-player").show()
 },
 
 
