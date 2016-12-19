@@ -9,8 +9,22 @@ const GameView = Backbone.View.extend({
   },
 
 events: {
-  'click .btn-play': 'clearForm',//clear the form, take in the names and prompt for player one to pick a box,
+  'click .btn-play': 'saveNames'
 },
+
+saveNames: function(e){
+    e.preventDefault();
+    console.log("Setting the player names")
+    this.model.set("playerX", this.$('#X').val())
+    this.model.set("playerO", this.$('#O').val())
+    this.greetPlayers()
+    this.clearForm();
+  },
+
+greetPlayers : function(){
+
+},
+
 
 clearForm: function() {
   console.log("Clearing the form")
