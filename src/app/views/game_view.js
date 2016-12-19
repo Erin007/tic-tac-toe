@@ -1,7 +1,7 @@
 //game_view.js
 import Backbone from 'backbone';
-import BoardView from 'app/views/board_view';
-import SpotView from 'app/views/spot_view';
+// import BoardView from 'app/views/board_view';
+// import SpotView from 'app/views/spot_view';
 
 const GameView = Backbone.View.extend({
   initialize: function() {
@@ -9,10 +9,11 @@ const GameView = Backbone.View.extend({
   },
 
 events: {
-  'click .btn-play': //clear the form, take in the names and prompt for player one to pick a box,
+  'click .btn-play': 'clearForm',//clear the form, take in the names and prompt for player one to pick a box,
 },
 
 clearForm: function() {
+  console.log("Clearing the form")
   this.$('.player-names-form input').val('');
   // if this isn't working make sure the class name is in the correct div...
 },

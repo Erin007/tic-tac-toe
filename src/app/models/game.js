@@ -19,18 +19,44 @@ const Game = Backbone.Model.extend({
     this.set("playerO", "Octavia");
   },
 
-  // countX: function(){
-  //     //counts how many X's are on the board
-  //   },
-  //
-  // countO: function(){
-  //     //counts how many Os are on the board
-  //   },
-  //
-  // moreXs: function(){
-  //     //calls the count functions to see whose turn it is, X starts, then O's turn if there are more Xs on the board
-  //   },
-  //
+  countX: function(){
+      //counts how many X's are on the board
+      var Xcount = 0;
+
+      for(var i = 0; i < 3; ++i){
+        for(var j = 0; j < 3; ++j){
+
+          if(this.get("board")[i][j] == "X")
+            Xcount ++;
+        }//inner for
+      }//outer for
+      return Xcount
+    },
+
+  countO: function(){
+      //counts how many Os are on the board
+      var Ocount = 0;
+
+      for(var i = 0; i < 3; ++i){
+        for(var j = 0; j < 3; ++j){
+
+          if(this.get("board")[i][j] == "O")
+            Ocount++;
+        }//inner for
+      }//outer for
+      return Ocount
+    },
+
+  moreXs: function(){
+      //calls the count functions to see whose turn it is, X starts, then O's turn if there are more Xs on the board
+      if (this.countX() > this.countO()){
+        return true
+      }
+      else {
+        return false
+      }
+    },
+  
       winner: function(){
       //determines if there is a winning trio of symbols on the board
 
@@ -58,11 +84,14 @@ const Game = Backbone.Model.extend({
       return false
 
     },
-  //
-  // tie: function(){
-  //     //determines if there is a tie game
-  //   },}
-  //
+
+  tie: function(){
+      if (this.winner() == false && this.countX() == 5){
+        return true
+      }
+      return false
+    },
+
   // announceWinner: function(){
   //   //uses the winner and tie functions from the boardView to determine if there is a winner/tie and displays who it is
   // },
