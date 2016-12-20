@@ -47,16 +47,12 @@ saveNames: function(e){
 
   drawX : function(){
     console.log("drawX called")
-    var clickForcer = 0
 
-    // while (clickForcer == 0){
       this.$("#spot1").click(_.bind(function() {
         console.log("box 1 selected");
         $("#spot1").text("X")
         this.model.attributes.board[0][0] = "X"
         console.log(this.model.attributes.board)
-        clickForcer ++
-        console.log(clickForcer)
         this.promptPlayerO()
         this.drawO()
       }, this))
@@ -66,7 +62,6 @@ saveNames: function(e){
         $("#spot2").text("X")
         this.model.attributes.board[0][1] = "X"
         console.log(this.model.attributes.board)
-        clickForcer ++
         this.promptPlayerO()
          this.drawO()
       }, this))
@@ -76,7 +71,6 @@ saveNames: function(e){
         $("#spot3").text("X")
         this.model.attributes.board[0][2] = "X"
         console.log(this.model.attributes.board)
-        clickForcer ++
         this.promptPlayerO()
         this.drawO()
       }, this))
@@ -86,7 +80,6 @@ saveNames: function(e){
         $("#spot4").text("X")
         this.model.attributes.board[1][0] = "X"
         console.log(this.model.attributes.board)
-        clickForcer ++
         this.promptPlayerO()
         this.drawO()
       }, this))
@@ -96,7 +89,6 @@ saveNames: function(e){
         $("#spot5").text("X")
         this.model.attributes.board[1][1] = "X"
         console.log(this.model.attributes.board)
-        clickForcer ++
         this.promptPlayerO()
         this.drawO()
       }, this))
@@ -106,7 +98,6 @@ saveNames: function(e){
         $("#spot6").text("X")
         this.model.attributes.board[1][2] = "X"
         console.log(this.model.attributes.board)
-        clickForcer ++
         this.promptPlayerO()
         this.drawO()
       }, this))
@@ -116,7 +107,6 @@ saveNames: function(e){
         $("#spot7").text("X")
         this.model.attributes.board[2][0] = "X"
         console.log(this.model.attributes.board)
-        clickForcer ++
         this.promptPlayerO()
         this.drawO()
       }, this))
@@ -126,7 +116,6 @@ saveNames: function(e){
         $("#spot8").text("X")
         this.model.attributes.board[2][1] = "X"
         console.log(this.model.attributes.board)
-        clickForcer ++
         this.promptPlayerO()
         this.drawO()
       }, this))
@@ -136,7 +125,6 @@ saveNames: function(e){
         $("#spot9").text("X")
         this.model.attributes.board[2][2] = "X"
         console.log(this.model.attributes.board)
-        clickForcer ++
         this.promptPlayerO()
         this.drawO()
       }, this))
@@ -146,14 +134,10 @@ saveNames: function(e){
 drawO : function(){
   console.log("drawO called")
 
-  var clickForcer = 0
-
-  // while (clickForcer == 0){
     this.$("#spot1").click(_.bind(function() {
       console.log("box 1 selected");
       $("#spot1").text("O")
       this.model.attributes.board[0][0] = "O"
-      clickForcer ++
       this.promptPlayerX()
       this.drawX()
     }, this))
@@ -162,7 +146,6 @@ drawO : function(){
       console.log("box 2 selected");
       $("#spot2").text("O")
       this.model.attributes.board[0][1] = "O"
-      clickForcer ++
       this.promptPlayerX()
       this.drawX()
     }, this))
@@ -171,7 +154,6 @@ drawO : function(){
       console.log("box 3 selected");
       $("#spot3").text("O")
       this.model.attributes.board[0][2] = "O"
-      clickForcer ++
       this.promptPlayerX()
       this.drawX()
     }, this))
@@ -180,7 +162,6 @@ drawO : function(){
       console.log("box 4 selected");
       $("#spot4").text("O")
       this.model.attributes.board[1][0] = "O"
-      clickForcer ++
       this.promptPlayerX()
       this.drawX()
     }, this))
@@ -189,7 +170,6 @@ drawO : function(){
       console.log("box 5 selected");
       $("#spot5").text("O")
       this.model.attributes.board[1][1] = "O"
-      clickForcer ++
       this.promptPlayerX()
       this.drawX()
     }, this))
@@ -198,7 +178,6 @@ drawO : function(){
       console.log("box 6 selected");
       $("#spot6").text("O")
       this.model.attributes.board[1][2] = "O"
-      clickForcer ++
       this.promptPlayerX()
       this.drawX()
     }, this))
@@ -207,7 +186,6 @@ drawO : function(){
       console.log("box 7 selected");
       $("#spot7").text("O")
       this.model.attributes.board[2][0] = "O"
-      clickForcer ++
       this.promptPlayerX()
       this.drawX()
     }, this))
@@ -216,7 +194,6 @@ drawO : function(){
       console.log("box 8 selected");
       $("#spot8").text("O")
       this.model.attributes.board[2][1] = "O"
-      clickForcer ++
       this.promptPlayerX()
       this.drawX()
     }, this))
@@ -225,7 +202,6 @@ drawO : function(){
       console.log("box 9 selected");
       $("#spot9").text("O")
       this.model.attributes.board[2][2] = "O"
-      clickForcer ++
       this.promptPlayerX()
       this.drawX()
     }, this))
