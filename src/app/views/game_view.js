@@ -88,6 +88,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('btn-new-game').show()
             this.save()
           }
         }
@@ -103,6 +104,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -121,6 +123,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -136,6 +139,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -154,6 +158,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -169,6 +174,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -187,6 +193,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -202,6 +209,7 @@ saveNames: function(e){
           }
           else{
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -220,6 +228,7 @@ saveNames: function(e){
           }
           else{
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -235,6 +244,7 @@ saveNames: function(e){
           }
           else{
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -253,6 +263,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -268,6 +279,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -286,6 +298,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -301,6 +314,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -319,6 +333,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -334,6 +349,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -352,6 +368,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }
@@ -367,6 +384,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.$('.btn-new-game').show()
             this.save()
           }
         }

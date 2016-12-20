@@ -3,6 +3,7 @@ h1 {
   font-size: 5em;
   text-align: center;
   color: white;
+  width: 100%;
 }
 
 label {
@@ -12,7 +13,7 @@ label {
   display: inline;
 }
 
-.btn-play {
+.btn-play, .btn-new-game {
   background: #e6f3ff;
   color:#00294d;
   border-radius: 5%;
@@ -22,21 +23,41 @@ label {
   padding: 1%;
 }
 
-.player-names-form, .tie{
-  width: 100%;
-  margin-top: 10%;
-  margin-left: 18%;
+.btn-new-game{
+  margin-left: 80%;
+  width: 10%;
+  position: fixed;
+  top: 15%;
+  right: 15%;
+  padding: 1%;
+  font-size: 2em;
 }
 
-.greet-playerX, .greet-playerO, .o-wins, .x-wins{
-  width: 100%;
+.btn-new-game:hover, .btn-play:hover{
+  background: #e6f3ff;
+  border: 5px solid white;
+  color:#00294d;
+}
+
+.player-names-form, .tie{
+  width: 80%;
   margin-top: 10%;
-  margin-left: 15%;  
+  margin-left: 20%;
+}
+
+.player-names-form *{
+  padding: 1%;
 }
 
 .greet-playerX, .greet-playerO, .o-wins, .x-wins, .tie {
-  margin-left: 28%;
+  margin-left: 25%;
   color: white;
+  width: 80%;
+  margin-top: 10%;
+}
+
+.o-wins, .x-wins, .tie{
+  margin-left: 28%;
 }
 
 .x-wins h2, .o-wins h2{

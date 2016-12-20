@@ -13,8 +13,10 @@ $(document).ready(function() {
   $(".x-wins").hide()
   $(".o-wins").hide()
   $(".tie").hide()
+  $('.btn-new-game').hide()
 
   var game = new Game();
+  //game.fetch();
 
     var gameView = new GameView({
       el: $('.application'),
