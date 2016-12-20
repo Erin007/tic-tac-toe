@@ -2,8 +2,7 @@
 import Backbone from 'backbone';
 import $ from 'jquery';
 import _ from 'underscore';
-// import BoardView from 'app/views/board_view';
-// import SpotView from 'app/views/spot_view';
+
 
 const GameView = Backbone.View.extend({
   initialize: function() {
@@ -53,8 +52,6 @@ saveNames: function(e){
     this.$(".greet-playerX").hide()
 
     if (this.model.tie() == true) {
-      this.$(".greet-playerO").hide()
-      this.$(".greet-playerX").hide()
       this.$('.tie').show()
     }
 
@@ -73,14 +70,10 @@ saveNames: function(e){
   drawSymbol : function(){
     console.log("drawSymbol called")
 
-
       this.$("#spot1").click(_.bind(function() {
-        console.log("box 1 selected");
         if ($("#spot1").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 1 is available")
           $("#spot1").text("X")
           this.model.attributes.board[0][0] = "X"
-          console.log(this.model.attributes.board)
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -91,10 +84,10 @@ saveNames: function(e){
         }
 
         if ($("#spot1").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 1 is available")
+
           $("#spot1").text("O")
           this.model.attributes.board[0][0] = "O"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerX();
             this.drawSymbol()
@@ -106,12 +99,12 @@ saveNames: function(e){
       }, this))
 
       this.$("#spot2").click(_.bind(function() {
-        console.log("box 2 selected");
+
         if ($("#spot2").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 2 is available")
+
           $("#spot2").text("X")
           this.model.attributes.board[0][1] = "X"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -122,10 +115,10 @@ saveNames: function(e){
         }
 
         if ($("#spot2").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 2 is available")
+
           $("#spot2").text("O")
           this.model.attributes.board[0][1] = "O"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerX();
             this.drawSymbol()
@@ -137,12 +130,12 @@ saveNames: function(e){
       }, this))
 
       this.$("#spot3").click(_.bind(function() {
-        console.log("box 3 selected");
+
         if ($("#spot3").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 3 is available")
+
           $("#spot3").text("X")
           this.model.attributes.board[0][2] = "X"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -153,10 +146,10 @@ saveNames: function(e){
         }
 
         if ($("#spot3").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 3 is available")
+
           $("#spot3").text("O")
           this.model.attributes.board[0][2] = "O"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false ){
             this.promptPlayerX();
             this.drawSymbol()
@@ -168,12 +161,12 @@ saveNames: function(e){
       }, this))
 
       this.$("#spot4").click(_.bind(function() {
-        console.log("box 4 selected");
+
         if ($("#spot4").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 4 is available")
+
           $("#spot4").text("X")
           this.model.attributes.board[1][0] = "X"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -184,10 +177,10 @@ saveNames: function(e){
         }
 
         if ($("#spot4").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 4 is available")
+
           $("#spot4").text("O")
           this.model.attributes.board[1][0] = "O"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerX();
             this.drawSymbol()
@@ -199,12 +192,12 @@ saveNames: function(e){
       }, this))
 
       this.$("#spot5").click(_.bind(function() {
-        console.log("box 5 selected");
+
         if ($("#spot5").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 5 is available")
+
           $("#spot5").text("X")
           this.model.attributes.board[1][1] = "X"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -215,10 +208,10 @@ saveNames: function(e){
         }
 
         if ($("#spot5").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 5 is available")
+
           $("#spot5").text("O")
           this.model.attributes.board[1][1] = "O"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerX();
             this.drawSymbol()
@@ -230,12 +223,12 @@ saveNames: function(e){
       }, this))
 
       this.$("#spot6").click(_.bind(function() {
-        console.log("box 6 selected");
+
         if ($("#spot6").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 6 is available")
+
           $("#spot6").text("X")
           this.model.attributes.board[1][2] = "X"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -246,10 +239,10 @@ saveNames: function(e){
         }
 
         if ($("#spot6").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 6 is available")
+
           $("#spot6").text("O")
           this.model.attributes.board[1][2] = "O"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerX();
             this.drawSymbol()
@@ -261,12 +254,12 @@ saveNames: function(e){
       }, this))
 
       this.$("#spot7").click(_.bind(function() {
-        console.log("box 7 selected");
+
         if ($("#spot7").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 7 is available")
+
           $("#spot7").text("X")
           this.model.attributes.board[2][0] = "X"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -277,10 +270,10 @@ saveNames: function(e){
         }
 
         if ($("#spot7").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 7 is available")
+
           $("#spot7").text("O")
           this.model.attributes.board[2][0] = "O"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerX();
             this.drawSymbol()
@@ -292,12 +285,12 @@ saveNames: function(e){
       }, this))
 
       this.$("#spot8").click(_.bind(function() {
-        console.log("box 8 selected");
+
         if ($("#spot8").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 8 is available")
+
           $("#spot8").text("X")
           this.model.attributes.board[2][1] = "X"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -308,10 +301,10 @@ saveNames: function(e){
         }
 
         if ($("#spot8").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 8 is available")
+
           $("#spot8").text("O")
           this.model.attributes.board[2][1] = "O"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerX();
             this.drawSymbol()
@@ -323,12 +316,12 @@ saveNames: function(e){
       }, this))
 
       this.$("#spot9").click(_.bind(function() {
-        console.log("box 9 selected");
+
         if ($("#spot9").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 9 is available")
+
           $("#spot9").text("X")
           this.model.attributes.board[2][2] = "X"
-          console.log(this.model.attributes.board)
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -339,10 +332,10 @@ saveNames: function(e){
         }
 
         if ($("#spot9").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
-          console.log("spot 9 is available")
+
           $("#spot9").text("O")
           this.model.attributes.board[2][2] = "O"
-          console.log(this.model.attributes.board)
+          
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerX();
             this.drawSymbol()
