@@ -1,8 +1,5 @@
 //game.js
 import Backbone from 'backbone';
-// import Player from 'app/models/player';
-// import Spot from 'app/models/spot';
-// import Board from 'app/collections/board';
 
 const Game = Backbone.Model.extend({
   // This model represents the overall application.
@@ -13,9 +10,8 @@ const Game = Backbone.Model.extend({
             [" "," "," "],
           ]);
 
-    //this.set("playerX", this.$('.player-names-form input[name1="name1"]').val());
+    //default names that are over-written if the user enters different names for players
     this.set("playerX", "Xavier");
-    //this.set("playerO", this.$('.player-names-form input[name2="name2"]').val());
     this.set("playerO", "Octavia");
   },
 

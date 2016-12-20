@@ -16,8 +16,15 @@ events: {
 saveNames: function(e){
     e.preventDefault();
     console.log("Setting the player names")
-    this.model.set("playerX", this.$('#X').val())
-    this.model.set("playerO", this.$('#O').val())
+    
+    if (this.$('#X').val() != "") {
+      this.model.set("playerX", this.$('#X').val())
+    }
+
+    if (this.$('#O').val() != "") {
+      this.model.set("playerO", this.$('#O').val())
+    }
+
     this.clearForm();
     this.startGame()
   },
@@ -58,7 +65,6 @@ saveNames: function(e){
     if (this.model.winner() == "X"){
       this.$('.x-wins').append("<h2> Congratulations, " + this.model.attributes.playerX + "! </h2>")
       this.$('.x-wins').show()
-
     }
 
     if (this.model.winner() == "O"){
