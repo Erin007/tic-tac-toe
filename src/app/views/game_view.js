@@ -16,7 +16,7 @@ events: {
 saveNames: function(e){
     e.preventDefault();
     console.log("Setting the player names")
-    
+
     if (this.$('#X').val() != "") {
       this.model.set("playerX", this.$('#X').val())
     }
@@ -88,6 +88,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
 
@@ -102,6 +103,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
       }, this))
@@ -119,6 +121,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
 
@@ -133,6 +136,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
       }, this))
@@ -150,6 +154,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
 
@@ -164,6 +169,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
       }, this))
@@ -181,6 +187,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
 
@@ -195,6 +202,7 @@ saveNames: function(e){
           }
           else{
             this.announceWinner()
+            this.save()
           }
         }
       }, this))
@@ -212,6 +220,7 @@ saveNames: function(e){
           }
           else{
             this.announceWinner()
+            this.save()
           }
         }
 
@@ -226,6 +235,7 @@ saveNames: function(e){
           }
           else{
             this.announceWinner()
+            this.save()
           }
         }
       }, this))
@@ -243,6 +253,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
 
@@ -257,6 +268,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
       }, this))
@@ -274,6 +286,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
 
@@ -288,6 +301,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
       }, this))
@@ -305,6 +319,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
 
@@ -319,6 +334,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
       }, this))
@@ -336,6 +352,7 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
 
@@ -350,22 +367,14 @@ saveNames: function(e){
           }
           else {
             this.announceWinner()
+            this.save()
           }
         }
       }, this))
 },
 
 
-
-
-
 render: function() {
-
-  // const rolodexView = new RolodexView({
-  //   model: this.model.rolodex,
-  //   el: this.$('main')
-  // });
-  // rolodexView.render();
 
   return this;
 }
