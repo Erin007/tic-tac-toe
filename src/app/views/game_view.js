@@ -53,6 +53,8 @@ saveNames: function(e){
     this.$(".greet-playerX").hide()
 
     if (this.model.tie() == true) {
+      this.$(".greet-playerO").hide()
+      this.$(".greet-playerX").hide()
       this.$('.tie').show()
     }
 
@@ -83,7 +85,7 @@ saveNames: function(e){
             this.promptPlayerO();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -97,7 +99,7 @@ saveNames: function(e){
             this.promptPlayerX();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -114,7 +116,7 @@ saveNames: function(e){
             this.promptPlayerO();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -128,7 +130,7 @@ saveNames: function(e){
             this.promptPlayerX();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -145,7 +147,7 @@ saveNames: function(e){
             this.promptPlayerO();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -159,7 +161,7 @@ saveNames: function(e){
             this.promptPlayerX();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -176,7 +178,7 @@ saveNames: function(e){
             this.promptPlayerO();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -190,7 +192,7 @@ saveNames: function(e){
             this.promptPlayerX();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else{
             this.announceWinner()
           }
         }
@@ -207,7 +209,7 @@ saveNames: function(e){
             this.promptPlayerO();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else{
             this.announceWinner()
           }
         }
@@ -221,7 +223,7 @@ saveNames: function(e){
             this.promptPlayerX();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else{
             this.announceWinner()
           }
         }
@@ -238,7 +240,7 @@ saveNames: function(e){
             this.promptPlayerO();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -252,7 +254,7 @@ saveNames: function(e){
             this.promptPlayerX();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -269,7 +271,7 @@ saveNames: function(e){
             this.promptPlayerO();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -283,7 +285,7 @@ saveNames: function(e){
             this.promptPlayerX();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -300,7 +302,7 @@ saveNames: function(e){
             this.promptPlayerO();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -314,7 +316,7 @@ saveNames: function(e){
             this.promptPlayerX();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -331,7 +333,7 @@ saveNames: function(e){
             this.promptPlayerO();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }
@@ -345,7 +347,7 @@ saveNames: function(e){
             this.promptPlayerX();
             this.drawSymbol()
           }
-          if (this.model.winner() != false){
+          else {
             this.announceWinner()
           }
         }

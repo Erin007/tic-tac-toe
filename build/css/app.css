@@ -22,10 +22,16 @@ label {
   padding: 1%;
 }
 
-.player-names-form, .greet-playerX, .greet-playerO, .o-wins, .x-wins, .tie{
+.player-names-form, .tie{
   width: 100%;
   margin-top: 10%;
   margin-left: 18%;
+}
+
+.greet-playerX, .greet-playerO, .o-wins, .x-wins{
+  width: 100%;
+  margin-top: 10%;
+  margin-left: 15%;  
 }
 
 .greet-playerX, .greet-playerO, .o-wins, .x-wins, .tie {
@@ -35,6 +41,7 @@ label {
 
 .x-wins h2, .o-wins h2{
   display: inline;
+  font-family: 'Dekko', sans-serif;
 }
 
 h2, td {
