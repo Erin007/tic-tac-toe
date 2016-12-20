@@ -56,8 +56,8 @@ const Game = Backbone.Model.extend({
         return false
       }
     },
-  
-      winner: function(){
+
+    winner: function(){
       //determines if there is a winning trio of symbols on the board
 
       for (var i=0; i < 3; i++){
@@ -92,15 +92,6 @@ const Game = Backbone.Model.extend({
       return false
     },
 
-  // announceWinner: function(){
-  //   //uses the winner and tie functions from the boardView to determine if there is a winner/tie and displays who it is
-  // },
-  //
-  // play: function(){
-  //   //controls the flow of the game by alternating whose turn it is
-  // },
-
-  // }
 });
 
 module.exports = Game;

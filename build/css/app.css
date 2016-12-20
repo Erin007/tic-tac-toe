@@ -33,6 +33,10 @@ label {
   color: white;
 }
 
+.x-wins h2, .o-wins h2{
+  display: inline;
+}
+
 h2, td {
     font-family: 'Dekko', sans-serif;
 }

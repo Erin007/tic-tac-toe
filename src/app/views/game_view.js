@@ -25,19 +25,20 @@ saveNames: function(e){
 
   startGame : function(){
     this.$(".player-names-form").hide();
-    this.$(".greet-playerX").show()
-    // this.play();
+    this.promptPlayerX();
     this.drawSymbol();
   },
 
   promptPlayerX : function(){
     console.log("Xs turn")
+    this.$('.greet-playerX').html("<h2>" + this.model.attributes.playerX + ", where would you like to put your X? </h2>")
     this.$(".greet-playerX").show()
     this.$(".greet-playerO").hide()
   },
 
   promptPlayerO : function(){
     console.log("Os turn")
+    this.$('.greet-playerO').html("<h2>" + this.model.attributes.playerO + ", where would you like to put your O? </h2>")
     this.$(".greet-playerO").show()
     this.$(".greet-playerX").hide()
   },
@@ -56,10 +57,13 @@ saveNames: function(e){
     }
 
     if (this.model.winner() == "X"){
+      this.$('.x-wins').append("<h2> Congratulations, " + this.model.attributes.playerX + "! </h2>")
       this.$('.x-wins').show()
+
     }
 
     if (this.model.winner() == "O"){
+      this.$('.o-wins').append("<h2> Congratulations, " + this.model.attributes.playerO + "! </h2>")
       this.$('.o-wins').show()
     }
   },

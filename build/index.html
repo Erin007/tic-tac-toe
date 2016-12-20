@@ -35,11 +35,9 @@
       </div>
 
       <div class ="greet-playerX">
-        <h2> Where would you like to put your X? </h2>
       </div>
 
       <div class ="greet-playerO">
-        <h2> Where would you like to put your O? </h2>
       </div>
 
       <div class ="x-wins">
@@ -75,9 +73,10 @@
     </main>
 
     <!-- Underscore Templates -->
-    <script type="text/template" id="tmpl-spot">
 
-    </script>
+  <script type="text/template" id="tmpl-congrats">
+    <h5 id="congratsX">Congratulations, <%- playerX %> </h5>
+  </script>
 
     <script src="/app.bundle.js" charset="utf-8"></script>
   </body>
