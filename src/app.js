@@ -10,6 +10,9 @@ $(document).ready(function() {
 
   $(".greet-playerX").hide()
   $(".greet-playerO").hide()
+  $(".x-wins").hide()
+  $(".o-wins").hide()
+  $(".tie").hide()
 
   var game = new Game();
 
