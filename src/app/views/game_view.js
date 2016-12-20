@@ -55,8 +55,10 @@ saveNames: function(e){
   },
 
   announceWinner : function(){
+    console.log("announcing the winner")
     this.$(".greet-playerO").hide()
     this.$(".greet-playerX").hide()
+    this.$('btn-new-game').show()
 
     if (this.model.tie() == true) {
       this.$('.tie').show()
@@ -73,6 +75,28 @@ saveNames: function(e){
     }
   },
 
+  shouldOgo : function(){
+    if (this.model.winner() == false && this.model.tie() == false){
+      this.promptPlayerO();
+      this.drawSymbol()
+    }
+    else {
+      this.announceWinner()
+      //this.save()
+    }
+  },
+
+  shouldXgo : function(){
+    if (this.model.winner() == false && this.model.tie() == false){
+      this.promptPlayerX();
+      this.drawSymbol()
+    }
+    else {
+      this.announceWinner()
+      //this.save()
+    }
+  },
+
   drawSymbol : function(){
     console.log("drawSymbol called")
 
@@ -82,15 +106,7 @@ saveNames: function(e){
           $("#spot1").text("X")
           this.model.attributes.board[0][0] = "X"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerO();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('btn-new-game').show()
-            this.save()
-          }
+          this.shouldOgo();
         }
 
         if ($("#spot1").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
@@ -98,15 +114,7 @@ saveNames: function(e){
           $("#spot1").text("O")
           this.model.attributes.board[0][0] = "O"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerX();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldXgo();
         }
       }, this))
 
@@ -117,15 +125,7 @@ saveNames: function(e){
           $("#spot2").text("X")
           this.model.attributes.board[0][1] = "X"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerO();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldOgo();
         }
 
         if ($("#spot2").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
@@ -133,15 +133,7 @@ saveNames: function(e){
           $("#spot2").text("O")
           this.model.attributes.board[0][1] = "O"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerX();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldXgo();
         }
       }, this))
 
@@ -152,15 +144,7 @@ saveNames: function(e){
           $("#spot3").text("X")
           this.model.attributes.board[0][2] = "X"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerO();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldOgo();
         }
 
         if ($("#spot3").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
@@ -168,15 +152,7 @@ saveNames: function(e){
           $("#spot3").text("O")
           this.model.attributes.board[0][2] = "O"
 
-          if (this.model.winner() == false && this.model.tie() == false ){
-            this.promptPlayerX();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldXgo();
         }
       }, this))
 
@@ -187,15 +163,7 @@ saveNames: function(e){
           $("#spot4").text("X")
           this.model.attributes.board[1][0] = "X"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerO();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldOgo();
         }
 
         if ($("#spot4").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
@@ -203,15 +171,7 @@ saveNames: function(e){
           $("#spot4").text("O")
           this.model.attributes.board[1][0] = "O"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerX();
-            this.drawSymbol()
-          }
-          else{
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldXgo();
         }
       }, this))
 
@@ -222,15 +182,7 @@ saveNames: function(e){
           $("#spot5").text("X")
           this.model.attributes.board[1][1] = "X"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerO();
-            this.drawSymbol()
-          }
-          else{
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldOgo();
         }
 
         if ($("#spot5").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
@@ -238,15 +190,7 @@ saveNames: function(e){
           $("#spot5").text("O")
           this.model.attributes.board[1][1] = "O"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerX();
-            this.drawSymbol()
-          }
-          else{
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldXgo();
         }
       }, this))
 
@@ -257,15 +201,7 @@ saveNames: function(e){
           $("#spot6").text("X")
           this.model.attributes.board[1][2] = "X"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerO();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldOgo();
         }
 
         if ($("#spot6").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
@@ -273,15 +209,7 @@ saveNames: function(e){
           $("#spot6").text("O")
           this.model.attributes.board[1][2] = "O"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerX();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldXgo();
         }
       }, this))
 
@@ -292,15 +220,7 @@ saveNames: function(e){
           $("#spot7").text("X")
           this.model.attributes.board[2][0] = "X"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerO();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldOgo();
         }
 
         if ($("#spot7").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
@@ -308,15 +228,7 @@ saveNames: function(e){
           $("#spot7").text("O")
           this.model.attributes.board[2][0] = "O"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerX();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldXgo();
         }
       }, this))
 
@@ -327,15 +239,7 @@ saveNames: function(e){
           $("#spot8").text("X")
           this.model.attributes.board[2][1] = "X"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerO();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldOgo();
         }
 
         if ($("#spot8").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
@@ -343,15 +247,7 @@ saveNames: function(e){
           $("#spot8").text("O")
           this.model.attributes.board[2][1] = "O"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerX();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldXgo();
         }
       }, this))
 
@@ -362,15 +258,7 @@ saveNames: function(e){
           $("#spot9").text("X")
           this.model.attributes.board[2][2] = "X"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerO();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldOgo();
         }
 
         if ($("#spot9").text() == "" && this.model.moreXs() == true && this.model.winner() == false && this.model.tie() == false) {
@@ -378,15 +266,7 @@ saveNames: function(e){
           $("#spot9").text("O")
           this.model.attributes.board[2][2] = "O"
 
-          if (this.model.winner() == false && this.model.tie() == false){
-            this.promptPlayerX();
-            this.drawSymbol()
-          }
-          else {
-            this.announceWinner()
-            this.$('.btn-new-game').show()
-            this.save()
-          }
+          this.shouldXgo();
         }
       }, this))
 },
