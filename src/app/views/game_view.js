@@ -10,7 +10,14 @@ const GameView = Backbone.View.extend({
   },
 
 events: {
-  'click .btn-play': 'saveNames'
+  'click .btn-play': 'saveNames',
+  'click .btn-new-game': 'newGame'
+},
+
+
+newGame : function (e){
+    e.preventDefault();
+    window.location.reload();
 },
 
 saveNames: function(e){
