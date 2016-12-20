@@ -72,8 +72,10 @@ saveNames: function(e){
 
       this.$("#spot1").click(_.bind(function() {
         if ($("#spot1").text() == "" && this.model.moreXs() == false && this.model.winner() == false && this.model.tie() == false) {
+
           $("#spot1").text("X")
           this.model.attributes.board[0][0] = "X"
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerO();
             this.drawSymbol()
@@ -335,7 +337,7 @@ saveNames: function(e){
 
           $("#spot9").text("O")
           this.model.attributes.board[2][2] = "O"
-          
+
           if (this.model.winner() == false && this.model.tie() == false){
             this.promptPlayerX();
             this.drawSymbol()
