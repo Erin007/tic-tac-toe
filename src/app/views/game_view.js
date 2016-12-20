@@ -58,7 +58,7 @@ saveNames: function(e){
     console.log("announcing the winner")
     this.$(".greet-playerO").hide()
     this.$(".greet-playerX").hide()
-    this.$('btn-new-game').show()
+    this.$(".btn-new-game").show()
 
     if (this.model.tie() == true) {
       this.$('.tie').show()
