@@ -22,13 +22,13 @@ label {
   padding: 1%;
 }
 
-.player-names-form, .greet-player {
+.player-names-form, .greet-playerX, .greet-playerO{
   width: 100%;
   margin-top: 10%;
   margin-left: 18%;
 }
 
-.greet-player {
+.greet-playerX, .greet-playerO {
   margin-left: 28%;
   color: white;
 }

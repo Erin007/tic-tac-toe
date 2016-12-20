@@ -7,7 +7,10 @@ import GameView from 'app/views/game_view';
 
 
 $(document).ready(function() {
-$(".greet-player").hide()
+
+  $(".greet-playerX").hide()
+  $(".greet-playerO").hide()
+
   var game = new Game();
 
     var gameView = new GameView({

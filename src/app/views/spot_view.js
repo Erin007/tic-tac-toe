@@ -23,6 +23,9 @@ const SpotView = Backbone.View.extend({
   render: function() {
     console.log("rendering a spot")
     this.$el.html("X");
+    this.delegateEvents();
+    this.listenTo(this.model, "change", this.render);
+
     return this;
   }
 });
