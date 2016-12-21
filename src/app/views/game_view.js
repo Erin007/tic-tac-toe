@@ -89,7 +89,7 @@ saveNames: function(e){
     }
     else {
       this.announceWinner()
-      //this.save()
+      this.model.saveGame()
     }
   },
 
@@ -100,7 +100,7 @@ saveNames: function(e){
     }
     else {
       this.announceWinner()
-      //this.save()
+      this.model.saveGame()
     }
   },
 

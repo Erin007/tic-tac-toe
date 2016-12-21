@@ -15,8 +15,9 @@ $(document).ready(function() {
   $(".tie").hide()
   $('.btn-new-game').hide()
 
+
   var game = new Game();
-  //game.fetch();
+  game.fetch()
 
     var gameView = new GameView({
       el: $('.application'),
