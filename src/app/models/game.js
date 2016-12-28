@@ -1,7 +1,6 @@
 //game.js
 import Backbone from 'backbone';
 
-
 const Game = Backbone.Model.extend({
   // This model represents the overall application.
   initialize: function(options) {
@@ -17,10 +16,6 @@ const Game = Backbone.Model.extend({
   },
 
   url: 'http://localhost:3000/api/v1/games',
-  // parse: function(data) {
-  //   return data.tasks;
-  // },
-
 
   countX: function(){
       //counts how many X's are on the board
@@ -66,7 +61,6 @@ const Game = Backbone.Model.extend({
       return "draw"
     }
   },
-
 
   saveGame : function(){
       this.save(this.APIprep())
